@@ -1,0 +1,24 @@
+{
+  "name": "serverless-nodejs-starter",
+  "version": "1.0.0",
+  "description": "A Node.js starter for Serverless Framework with ES6 and TypeScript support",
+  "main": "src/handlers/main.js",
+  "scripts": {
+    "test": "serverless-bundle test"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renanwilliam/serverless-nodejs-starter.git"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.62",
+    "serverless-bundle": "2.0.0",
+    "serverless-dotenv-plugin": "^2.4.2",
+    "serverless-offline": "^5.12.1"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.14"
+  }
+}
