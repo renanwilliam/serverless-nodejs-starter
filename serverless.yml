@@ -1,9 +1,9 @@
-service: 
+service:
   name: serverless-nodejs-starter
 
 plugins:
-  - serverless-bundle 
-  - serverless-pseudo-parameters  
+  - serverless-bundle
+  - serverless-pseudo-parameters
 
 provider:
   name: aws
@@ -12,7 +12,7 @@ provider:
 
 functions:
   hello:
-    handler: handlers/main.hello
+    handler: src/handlers/main.hello
     events:
       - http:
           path: hello
