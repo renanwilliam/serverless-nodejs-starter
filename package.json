@@ -19,6 +19,7 @@
     "serverless-offline": "^5.12.1"
   },
   "dependencies": {
-    "@types/jest": "^26.0.14"
+    "@types/jest": "^26.0.14",
+    "serverless-pseudo-parameters": "^2.5.0"
   }
 }
