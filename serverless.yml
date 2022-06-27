@@ -1,13 +1,14 @@
-service:
-  name: serverless-nodejs-starter
+service: serverless-nodejs-starter
+frameworkVersion: '3'
+useDotenv: true
 
 plugins:
-  - serverless-bundle
-  - serverless-pseudo-parameters
+  - serverless-esbuild
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
+  memorySize: 256
   stage: ${opt:stage, 'dev'}
 
 functions:
@@ -17,8 +18,3 @@ functions:
       - http:
           path: hello
           method: get
-
-custom:
-  bundle:
-    sourcemaps: false
-    linting: false

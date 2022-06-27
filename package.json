@@ -1,12 +1,15 @@
 {
   "name": "serverless-nodejs-starter",
   "version": "1.0.0",
-  "description": "A Node.js starter for Serverless Framework with ES6 and TypeScript support",
+  "description": "A Node.js starter for Serverless Framework with ESNext and TypeScript support",
   "main": "src/handlers/main.js",
   "scripts": {
-    "test": "serverless-bundle test"
+    "test": "jest"
   },
-  "author": "",
+  "author": {
+    "name": "Renan William Alves de Paula",
+    "email": "renanwilliam.paula@gmail.com"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -14,12 +17,13 @@
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.62",
-    "serverless-bundle": "2.0.0",
-    "serverless-dotenv-plugin": "^2.4.2",
-    "serverless-offline": "^5.12.1"
-  },
-  "dependencies": {
     "@types/jest": "^26.0.14",
-    "serverless-pseudo-parameters": "^2.5.0"
-  }
+    "esbuild": "^0.14.47",
+    "jest": "^28.1.1",
+    "serverless": "^3.19.0",
+    "serverless-esbuild": "^1.31.0",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {}
 }
