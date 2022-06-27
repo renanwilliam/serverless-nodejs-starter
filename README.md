@@ -1,13 +1,15 @@
 # Serverless Node.js Starter
 
-A Serverless starter that adds ES6, TypeScript, linting, and unit test support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
+A Serverless starter that adds ES6, TypeScript, linting, and unit test support. Part of
+the [Serverless Stack](http://serverless-stack.com) guide.
 
-[Serverless Node.js Starter](https://github.com/renanwilliam/serverless-nodejs-starter) uses the [serverless-bundle](https://github.com/AnomalyInnovations/serverless-bundle) plugin. It supports:
+[Serverless Node.js Starter](https://github.com/renanwilliam/serverless-nodejs-starter) uses
+the [serverless-esbuild](https://github.com/floydspace/serverless-esbuild) plugin. It supports:
 
 - **Generating optimized Lambda packages with Webpack**
-- **Using ES6 or TypeScript in your handler functions**
+- **Using ESNext or TypeScript in your handler functions**
 - **Support for unit tests**
-  - Run `npm test` to run your tests
+  - Run `yarn run test` to run your tests
 - **Sourcemaps for proper error messages**
   - Error message show the correct line numbers
   - Works in production with CloudWatch
@@ -38,7 +40,7 @@ $ cd my-project
 Install the Node.js packages
 
 ``` bash
-$ npm install
+$ yarn install
 ```
 
 ### Usage
@@ -72,30 +74,27 @@ $ serverless deploy function --function hello
 Run your tests using
 
 ``` bash
-$ npm test
+$ npm run test
 ```
 
-We use Jest to run our tests. You can read more about setting up your tests [here](https://facebook.github.io/jest/docs/en/getting-started.html#content).
+We use Jest to run our tests. You can read more about setting up your
+tests [here](https://facebook.github.io/jest/docs/en/getting-started.html#content).
 
-#### TypeScript
+#### Bundle
 
-If [serverless-bundle](https://github.com/AnomalyInnovations/serverless-bundle) detects a `tsconfig.json` in your service root, it'll compile it using TypeScript.
+We use [serverless-esbuild](https://github.com/floydspace/serverless-esbuild) to create the bundle. It works with
+Typescript and Javascript projects.
+
+#### Formatting
+
+We use [Prettier](https://prettier.io/) to format your code via `npm run prettier-format`.
 
 #### Linting
 
-We use [ESLint](https://eslint.org) to lint your code via [serverless-bundle](https://github.com/AnomalyInnovations/serverless-bundle).
-
-You can turn this off by adding the following to your `serverless.yml`.
-
-``` yaml
-custom:
-  bundle:
-    linting: false
-```
-
-To [override the default config](https://eslint.org/docs/user-guide/configuring), add a `.eslintrc.json` file. To ignore ESLint for specific files, add it to a `.eslintignore` file.
+We use [Typescript ESLint](https://typescript-eslint.io/) to lint your code via `npm run eslint`.
 
 ### Support
 
-- Open a [new issue](https://github.com/renanwilliam/serverless-nodejs-starter/issues/new) if you've found a bug or have some suggestions.
+- Open a [new issue](https://github.com/renanwilliam/serverless-nodejs-starter/issues/new) if you've found a bug or have
+  some suggestions.
 - Or submit a pull request!

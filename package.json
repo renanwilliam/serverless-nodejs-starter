@@ -4,7 +4,9 @@
   "description": "A Node.js starter for Serverless Framework with ESNext and TypeScript support",
   "main": "src/handlers/main.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "eslint": "eslint .",
+    "prettier-format": "prettier --config .prettierrc.json 'src/**/*.ts' --write"
   },
   "author": {
     "name": "Renan William Alves de Paula",
@@ -18,8 +20,14 @@
   "devDependencies": {
     "@types/aws-lambda": "^8.10.62",
     "@types/jest": "^26.0.14",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
     "esbuild": "^0.14.47",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.5.3",
     "jest": "^28.1.1",
+    "prettier": "^2.7.1",
     "serverless": "^3.19.0",
     "serverless-esbuild": "^1.31.0",
     "ts-jest": "^28.0.5",
